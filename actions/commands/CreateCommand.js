@@ -9,7 +9,7 @@ var CreateCommand = function(name) {
   var newProject = function() {
     var workDir = process.cwd();
     if (name === undefined || name === '' || name === null) {
-      console.log("Name your project, it's not a choice");
+      console.log("Please name your project");
       throw new Error('rens create Name');
     }
 
@@ -24,7 +24,6 @@ var CreateCommand = function(name) {
       "name": ProjectName,
       "version": "1.0.0",
       "description": "",
-      "main": "webpack.config.js",
       "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "start": "nodemon ./server/server.js",
@@ -40,7 +39,6 @@ var CreateCommand = function(name) {
         "babel-preset-react": "^6.16.0",
         "css-loader": "^0.26.0",
         "extract-text-webpack-plugin": "^1.0.1",
-        "mongoose": "^4.7.1",
         "mysql": "^2.12.0",
         "node-sass": "^3.13.0",
         "nodemon": "^1.11.0",
@@ -52,6 +50,7 @@ var CreateCommand = function(name) {
       "dependencies": {
         "axios": "^0.15.3",
         "body-parser": "^1.15.2",
+        "cors": "^2.8.1",
         "express": "^4.14.0",
         "morgan": "^1.7.0",
         "pg": "^6.1.0",

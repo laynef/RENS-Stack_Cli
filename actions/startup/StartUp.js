@@ -1,6 +1,7 @@
 var TextCommand = require('../commands/TextCommand.js');
 var PrintDocCommand = require('../commands/PrintDocCommand.js');
 var CreateCommand = require('../commands/CreateCommand.js');
+var CreatePage = require('../commands/CreatePage.js');
 var CreateComponent = require('../commands/CreateComponent.js');
 var CreateDirectory = require('../commands/CreateDirectory.js');
 
@@ -20,9 +21,9 @@ var StartUp = function(commandPattern, args, flags) {
         break;
       case 'make':
         commanderInCharge(CreateComponent);
-        break;
-      case 'mkdir':
-        commanderInCharge(CreateDirectory);
+        break;      
+      case 'page':
+        commanderInCharge(CreatePage);
         break;
       default:
         commanderInCharge(PrintDocCommand);

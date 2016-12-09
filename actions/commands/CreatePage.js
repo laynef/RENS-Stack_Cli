@@ -2,30 +2,30 @@ var ncp = require('ncp').ncp;
 var path = require('path');
 var fs = require('fs');
 
-var ComponentCommand = function(name) {
+var PageCommand = function(name) {
 
   var capitalName = name[0].toUpperCase() + name.slice(1).toLowerCase();
 
   var newComponent = function() {
     var workDir = process.cwd();
     if (name === undefined || name === '' || name === null) {
-      console.log("Please name your component");
-      throw new Error('rens component Name');
+      console.log("Please name your page");
+      throw new Error('rens page Name');
     }
 
-    console.log("Creating your component");
+    console.log("Creating your page");
 
     var src = path.join(__dirname, '..', '..', 'project', 'component');
-    var dest = path.join(workDir, 'app', 'components', name);
-    var file = path.join(workDir, 'app', 'components', name, 'Component.jsx');
-    var newFile = path.join(workDir, 'app', 'components', name, capitalName + '.jsx');
+    var dest = path.join(workDir, 'app', 'pages', name);
+    var file = path.join(workDir, 'app', 'pages', name, 'Component.jsx');
+    var newFile = path.join(workDir, 'app', 'pages', name, capitalName + '.jsx');
 
     // copy project to new directory
     ncp(src, dest, function (err) {
        if (err) {
          return console.error(err);
        }
-       console.log('Creating React Component ...');
+       console.log('Creating React Page ...');
 
        fs.rename(file, newFile, function(e) {
          
@@ -41,7 +41,7 @@ var ComponentCommand = function(name) {
         });
       });
 
-       console.log("Your component is ready to go!");
+       console.log("Your page is ready to go!");
     });
 
   };
@@ -50,4 +50,4 @@ var ComponentCommand = function(name) {
   }
 };
 
-module.exports = ComponentCommand;
+module.exports = PageCommand;
