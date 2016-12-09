@@ -1,10 +1,10 @@
 var TextCommand = function() {
-  var whatYoudSay = function() {
+  var printStatement = function() {
     console.log("Your installation runs!");
   };
 
   return {
-    handle: whatYoudSay
+    handle: printStatement
   }
 }
 

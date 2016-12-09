@@ -4,10 +4,9 @@ const controllers = require('./controllers')
 
 // api/ server roots
 
-// authentication
+// user
 router.get('/user', controllers.auth.get)
 router.post('/user', controllers.auth.post)
-
 
 // export router for server.js
 module.exports = router

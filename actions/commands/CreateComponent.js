@@ -13,7 +13,7 @@ var ComponentCommand = function(name) {
       throw new Error('rens component Name');
     }
 
-    console.log("Raiding your ship");
+    console.log("Creating your component");
 
     var src = path.join(__dirname, '..', '..', 'project', 'component');
     var dest = path.join(workDir, 'client', 'app', 'components', name);
@@ -25,7 +25,7 @@ var ComponentCommand = function(name) {
        if (err) {
          return console.error(err);
        }
-       console.log('Looting up your gold ...');
+       console.log('Creating React Component ...');
 
        fs.rename(file, newFile, function(e) {
          

@@ -1,13 +1,10 @@
 {
   "name": "brms-pirate",
-  "version": "1.4.1",
-  "description": "Basic React Meteor Setup. This is a meteor that set-ups a react project for you. New updates will continue has needed. This is the basic setup I use when making my react projects. Enjoy!",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "version": "0.0.1",
+  "description": "A RENS Stack Cli",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/laynefaler/BRMS-Pirate_JS.git"
+    "url": "git+https://github.com/laynefaler/RENS-Stack_Cli.git"
   },
   "keywords": [
     "meteor"
@@ -15,12 +12,12 @@
   "author": "Layne Faler <laynefaler>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/laynefaler/BRMS-Pirate_JS/issues"
+    "url": "https://github.com/laynefaler/RENS-Stack_Cli/issues"
   },
-  "homepage": "https://github.com/laynefaler/BRMS-Pirate_JS#readme",
+  "homepage": "https://github.com/laynefaler/RENS-Stack_Cli#readme",
   "preferGlobal": true,
   "bin": {
-    "pirate": "./actions/index.js"
+    "rens": "./actions/index.js"
   },
   "dependencies": {
     "jsonfile": "^2.4.0",

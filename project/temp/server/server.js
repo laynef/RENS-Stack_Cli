@@ -5,6 +5,7 @@ const io = require('socket.io')(server)
 const parser = require('body-parser')
 const morgan = require('morgan')
 const routes = require('./routes')
+const cors = require('cors')
 
 // port settings
 let port = process.env.PORT || 3000
@@ -17,6 +18,7 @@ server.listen(port, () => {
 // Middleware
 // Body Parser, Morgan, and Public Compiled folder
 app.use(express.static('public'))
+app.use(cors())
 app.use(morgan('dev'))
 app.use(parser.json())
 
