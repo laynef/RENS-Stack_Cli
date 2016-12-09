@@ -4,7 +4,7 @@ var fs = require('fs');
 
 var PageCommand = function(name) {
 
-  var capitalName = name[0].toUpperCase() + name.slice(1).toLowerCase();
+  var capitalName = name[0].toUpperCase()
 
   var newComponent = function() {
     var workDir = process.cwd();
