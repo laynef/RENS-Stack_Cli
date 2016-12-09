@@ -1,6 +1,6 @@
 {
-  "name": "brms-pirate",
-  "version": "0.0.1",
+  "name": "rens-stack-cli",
+  "version": "1.0.0",
   "description": "A RENS Stack Cli",
   "repository": {
     "type": "git",

@@ -27,7 +27,9 @@ var CreateCommand = function(name) {
       "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "start": "nodemon ./server/server.js",
-        "build": "webpack -w"
+        "build": "webpack -p",
+        "postinstall": "webpack",
+        "watch": "webpack -w"
       },
       "keywords": [],
       "author": "",

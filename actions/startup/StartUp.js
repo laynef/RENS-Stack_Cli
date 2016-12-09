@@ -13,7 +13,7 @@ var StartUp = function(commandPattern, args, flags) {
 
   var execute = function() {
     switch (commandPattern) {
-      case 'arr':
+      case 'runs':
         commanderInCharge(TextCommand);
         break;
       case 'create':
