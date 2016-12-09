@@ -3,7 +3,6 @@ var PrintDocCommand = require('./../commands/PrintDocCommand.js');
 var CreateCommand = require('./../commands/CreateCommand.js');
 var PageCommand = require('./../commands/CreatePage.js');
 var ComponentCommand = require('./../commands/CreateComponent.js');
-var CreateDirectory = require('./../commands/CreateDirectory.js');
 
 var StartUp = function(commandPattern, args, flags) {
   var commanderInCharge = function(mod) {
