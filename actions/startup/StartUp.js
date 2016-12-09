@@ -1,9 +1,9 @@
-var TextCommand = require('../commands/TextCommand.js');
-var PrintDocCommand = require('../commands/PrintDocCommand.js');
-var CreateCommand = require('../commands/CreateCommand.js');
-var CreatePage = require('../commands/CreatePage.js');
-var CreateComponent = require('../commands/CreateComponent.js');
-var CreateDirectory = require('../commands/CreateDirectory.js');
+var TextCommand = require('./../commands/TextCommand.js');
+var PrintDocCommand = require('./../commands/PrintDocCommand.js');
+var CreateCommand = require('./../commands/CreateCommand.js');
+var PageCommand = require('./../commands/CreatePage.js');
+var ComponentCommand = require('./../commands/CreateComponent.js');
+var CreateDirectory = require('./../commands/CreateDirectory.js');
 
 var StartUp = function(commandPattern, args, flags) {
   var commanderInCharge = function(mod) {
@@ -20,10 +20,10 @@ var StartUp = function(commandPattern, args, flags) {
         commanderInCharge(CreateCommand);
         break;
       case 'make':
-        commanderInCharge(CreateComponent);
+        commanderInCharge(ComponentCommand);
         break;      
       case 'page':
-        commanderInCharge(CreatePage);
+        commanderInCharge(PageCommand);
         break;
       default:
         commanderInCharge(PrintDocCommand);
