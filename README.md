@@ -14,7 +14,6 @@
 `rens create <project-name-here>` <br>
 `cd <project-name-here>` <br>
 `npm install` <br>
-`npm run postinstall` <br>
 `npm start` <br>
 
 ## Make Empty Component
@@ -26,3 +25,7 @@
 
 `cd <your-project-here>` <br>
 `rens make <your-page-name-here>` <br>
+
+## Extra Commands
+Use `npm run build` for webpack production
+Use `npm run watch` for webpack developing watch
