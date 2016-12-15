@@ -1,5 +1,5 @@
 // Interact with database on the models functions here
-const Rec = require('../database/db')
+// const User = require('../database/db')
 
 module.exports = {
     user: {
