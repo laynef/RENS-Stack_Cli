@@ -27,5 +27,5 @@
 `rens make <your-page-name-here>` <br>
 
 ## Extra Commands
-Use `npm run build` for webpack production
-Use `npm run watch` for webpack developing watch
+Use `npm run build` for webpack production  <br>
+Use `npm run watch` for webpack developing watch  <br>
