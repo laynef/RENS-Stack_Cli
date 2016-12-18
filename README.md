@@ -24,7 +24,7 @@
 ## Make Empty Page
 
 `cd <your-project-here>` <br>
-`rens make <your-page-name-here>` <br>
+`rens page <your-page-name-here>` <br>
 
 ## Extra Commands
 Use `npm run build` for webpack production  <br>
