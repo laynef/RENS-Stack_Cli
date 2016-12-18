@@ -27,5 +27,6 @@
 `rens page <your-page-name-here>` <br>
 
 ## Extra Commands
+Use `npm start` to start the server <br>
 Use `npm run build` for webpack production  <br>
 Use `npm run watch` for webpack developing watch  <br>
