@@ -27,9 +27,9 @@ var CreateCommand = function(name) {
       "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "start": "nodemon ./server/server.js",
-        "build": "webpack -p",
+        "build:pro": "webpack -p",
         "postinstall": "webpack",
-        "watch": "webpack -w"
+        "build": "webpack -w"
       },
       "keywords": [],
       "author": "",
@@ -52,12 +52,16 @@ var CreateCommand = function(name) {
       "dependencies": {
         "axios": "^0.15.3",
         "body-parser": "^1.15.2",
+        "cookie-parser": "^1.4.3",
         "cors": "^2.8.1",
         "express": "^4.14.0",
+        "express-flash": "0.0.2",
+        "express-session": "^1.14.2",
         "morgan": "^1.7.0",
         "pg": "^6.1.0",
         "pg-hstore": "^2.3.2",
         "react": "^15.4.1",
+        "react-bootstrap": "^0.30.7",
         "react-dom": "^15.4.1",
         "react-redux": "^4.4.6",
         "react-router": "^3.0.0",

@@ -6,6 +6,10 @@ const parser = require('body-parser')
 const morgan = require('morgan')
 const routes = require('./routes')
 const cors = require('cors')
+const cookieParser = require('cookie-parser')
+const session = require('express-session')
+const fs = require('fs')
+const config = require('../config')
 
 // port settings
 let port = process.env.PORT || 3000
@@ -20,7 +24,9 @@ server.listen(port, () => {
 app.use(express.static('public'))
 app.use(cors())
 app.use(morgan('dev'))
+app.use(parser.urlencoded({ extended: true}))
 app.use(parser.json())
+app.use(cookieParser())
 
 // Render the index.html
 app.get('/', (req, res) => { res.sendFile('index.html') })
@@ -29,10 +35,9 @@ app.use('/api', routes) // when you add api routes in routes.js
 
 // Web socket on connection 
 io.on('connection', (socket) => {
-    io.emit('this', { will: 'be received by everyone' })
-
-    // disconnect the websocket when user leaves
-    socket.on('disconnect',  () => {
-        io.emit('user disconnected')
+    fs.watch(__dirname + '/../', {recursive: true}, (e, o) => {
+        if (e === 'rename' || e === 'change') {
+            socket.emit('save')
+        }
     })
 })
