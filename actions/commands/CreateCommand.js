@@ -37,8 +37,10 @@ var CreateCommand = function(name) {
       "devDependencies": {
         "babel-core": "^6.18.2",
         "babel-loader": "^6.2.8",
+        "babel-plugin-transform-runtime": "^6.15.0",
         "babel-preset-es2015": "^6.18.0",
         "babel-preset-react": "^6.16.0",
+        "babel-preset-stage-0": "^6.16.0",
         "css-loader": "^0.26.0",
         "extract-text-webpack-plugin": "^1.0.1",
         "mysql": "^2.12.0",
@@ -51,6 +53,8 @@ var CreateCommand = function(name) {
       },
       "dependencies": {
         "axios": "^0.15.3",
+        "babel-polyfill": "^6.20.0",
+        "babel-runtime": "^6.20.0",
         "body-parser": "^1.15.2",
         "cookie-parser": "^1.4.3",
         "cors": "^2.8.1",
