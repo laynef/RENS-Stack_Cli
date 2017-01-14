@@ -37,6 +37,9 @@ module.exports = {
         root: path.resolve(__dirname + '/public'),
         attrs: ['img:src', 'link:href']
     },
+    resolve: {
+      extensions: ['', '.js', '.jsx', '.scss', '.css']
+    },
     plugins: [
         new ExtractTextPlugin('public/main.css', { allChunks: true })
     ]

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Greeting from '../../components/greeting/Greeting.jsx'
+import Greeting from '../../components/greeting/Greeting'
 
 export default class MainPage extends React.Component {
 
