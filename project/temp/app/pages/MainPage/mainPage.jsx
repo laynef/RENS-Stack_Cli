@@ -7,13 +7,13 @@ export default class MainPage extends React.Component {
     constructor(props, context) {
         super(props, context)
         this.state = {
-            
+
         }
     }
 
     render() {
         return (
-            <div>
+            <div id="mainPage">
                 <Greeting />
             </div>
             )
