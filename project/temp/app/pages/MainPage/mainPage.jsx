@@ -4,8 +4,11 @@ import Greeting from '../../components/greeting/Greeting'
 
 export default class MainPage extends React.Component {
 
-    constructor(props) {
-        super(props)
+    constructor(props, context) {
+        super(props, context)
+        this.state = {
+            
+        }
     }
 
     render() {
