@@ -1,3 +1,10 @@
-import { createStore, combineReducers } from 'redux'
+import reduxThunk from "redux-thunk";
+import createLogger from "redux-logger";
+import ReduxPromise from "redux-promise";
 
-export default () => (createStore(() => {}))
+export default () => (
+    createStore(
+        () => {},
+        applyMiddleware(reduxThunk, ReduxPromise, logger)
+    )
+)
