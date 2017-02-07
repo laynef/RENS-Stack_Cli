@@ -23,9 +23,9 @@ body {
 .topNavLink {
   text-decoration: none;
   color: #9d9d9d;
-}
-
-.topNavLink:hover {
-  color: rgba(255,255,255, 1);
-  text-decoration: none;
+  
+  :hover {
+    color: rgba(255,255,255, 1);
+    text-decoration: none;
+  }
 }

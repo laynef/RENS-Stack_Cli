@@ -1,15 +1,12 @@
-import React from 'react'
-import { Router, Route, Link, browserHistory } from 'react-router'
-import { NavbarHeader, NavbarToggle, NavbarCollapse, NavbarBrand, Navbar, Nav, NavItem, MenuItem, NavDropdown, Button } from 'react-bootstrap'
+import React, {Component} from 'react'
+import {connect} from 'react-redux'
+import { Link } from 'react-router'
+import { NavbarHeader, NavbarToggle, NavbarCollapse, NavbarBrand, Navbar, Nav, NavItem, MenuItem, NavDropdown } from 'react-bootstrap'
 
-
-export default class MasterPage extends React.Component {
-
-    constructor(props, context) {
-        super(props, context)
-    }
+class MasterPage extends Component {
 
     render() {
+        const {children} = this.props;
         return (
             <div>
                 <Navbar fixedTop inverse collapseOnSelect>
@@ -25,9 +22,12 @@ export default class MasterPage extends React.Component {
                     </Nav>
                     </Navbar.Collapse>
                 </Navbar>
-
-                {this.props.children}
+                
+                {children}
             </div>
             )
         }
 }
+
+export default connect(state => {
+})(MasterPage)

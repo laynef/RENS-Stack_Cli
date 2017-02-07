@@ -1,7 +1,7 @@
-import React from 'react'
+import React, {Component} from 'react'
 import { connect } from 'react-redux'
 
-class Main extends React.Component {
+class Main extends Component {
 
   constructor(props, context) {
     super(props, context)
@@ -33,4 +33,5 @@ Main.contextTypes = {
   store: React.PropTypes.object
 }
 
-export default connect()(Main)
+export default connect(state => {
+})(Main)
