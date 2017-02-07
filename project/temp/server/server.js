@@ -8,6 +8,7 @@ const routes = require('./routes')
 const cors = require('cors')
 const cookieParser = require('cookie-parser')
 const session = require('express-session')
+const favicon = require('express-favicon')
 const fs = require('fs')
 const config = require('../config')
 
@@ -21,6 +22,7 @@ server.listen(port, () => {
 
 // Middleware
 // Body Parser, Morgan, and Public Compiled folder
+app.use(favicon(__dirname + '/public/favicon.ico'))
 app.use(express.static('public'))
 app.use(cors())
 app.use(morgan('dev'))

@@ -59,6 +59,7 @@ var CreateCommand = function(name) {
         "cookie-parser": "^1.4.3",
         "cors": "^2.8.1",
         "express": "^4.14.0",
+        "express-favicon": "^2.0.0",
         "express-flash": "0.0.2",
         "express-session": "^1.14.2",
         "morgan": "^1.7.0",
