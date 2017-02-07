@@ -33,4 +33,5 @@ Main.contextTypes = {
   store: React.PropTypes.object
 }
 
-export default connect()(Main)
+export default connect(state => ({
+}))(Main)

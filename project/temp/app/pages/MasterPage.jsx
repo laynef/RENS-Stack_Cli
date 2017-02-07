@@ -24,4 +24,5 @@ class MasterPage extends Component {
         }
 }
 
-export default connect()(MasterPage)
+export default connect(state => ({
+}))(MasterPage)
