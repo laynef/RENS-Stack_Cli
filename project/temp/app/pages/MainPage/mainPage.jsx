@@ -18,5 +18,4 @@ class MainPage extends Component {
         }
 }
 
-export default connect(state => {
-})(MainPage)
+export default connect()(MainPage)

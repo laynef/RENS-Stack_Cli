@@ -16,11 +16,6 @@ class MasterPage extends Component {
                     </Navbar.Brand>
                     <Navbar.Toggle />
                     </Navbar.Header>
-                    <Navbar.Collapse>
-                    <Nav pullRight>
-                        <NavItem eventKey={1}><Link className="topNavLink" to="/">Link</Link></NavItem>
-                    </Nav>
-                    </Navbar.Collapse>
                 </Navbar>
                 
                 {children}
@@ -29,5 +24,4 @@ class MasterPage extends Component {
         }
 }
 
-export default connect(state => {
-})(MasterPage)
+export default connect()(MasterPage)
