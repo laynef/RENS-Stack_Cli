@@ -18,7 +18,7 @@ var CreateCommand = function(name) {
 
     var src = path.join(__dirname, '..', '..', 'project', 'temp');
     var dest = path.join(workDir, name);
-    var changeFile = path.join(__dirname, '..', '..', 'project', 'temp',  '.changeme');
+    var changeFile = path.join(__dirname, '..', '..', 'project', 'temp',  'changeme.txt');
     var ignoreFile = path.join(__dirname, '..', '..', 'project', 'temp', '.gitignore');
 
     var file = './' + name + '/package.json';
