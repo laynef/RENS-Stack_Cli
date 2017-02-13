@@ -18,8 +18,8 @@ var CreateCommand = function(name) {
 
     var src = path.join(__dirname, '..', '..', 'project', 'temp');
     var dest = path.join(workDir, name);
-    var changeFile = path.join(workDir, name,  '.changeme');
-    var ignoreFile = path.join(workDir, name, '.gitignore');
+    var changeFile = path.join(__dirname, '..', '..', 'project', 'temp',  '.changeme');
+    var ignoreFile = path.join(__dirname, '..', '..', 'project', 'temp', '.gitignore');
 
     var file = './' + name + '/package.json';
 
@@ -98,13 +98,13 @@ var CreateCommand = function(name) {
        jsonfile.writeFile(file, obj, {spaces: 2}, function (er) {
          // should be null
        });
+
+       fs.rename(changeFile, ignoreFile, function(e) {
+         // should be null
+        });
+        console.log("Your stacks ready to go!");
     });
 
-    fs.rename(changeFile, ignoreFile, function(e) {
-         // null
-    });
-    console.log("Your stacks ready to go!");
-    
   };
   return {
     handle: newProject
