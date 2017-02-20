@@ -11,6 +11,7 @@ import storeConfig from './redux/store/configStore'
 
 let store = storeConfig()
 
+
 class Root extends React.Component {
 
     getChildContext() {
