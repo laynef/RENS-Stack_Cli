@@ -8,6 +8,6 @@ export default class Greeting extends Component {
             <div>
                 <h1>Hello World</h1>
             </div>
-            )
-        }
+        )
+    }
 }

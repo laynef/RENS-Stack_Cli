@@ -22,8 +22,8 @@ class MasterPage extends Component {
                 
                 { children }
             </div>
-            )
-        }
+        )
+    }
 }
 
 MasterPage = reduxForm({

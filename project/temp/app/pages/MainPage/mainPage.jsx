@@ -18,8 +18,8 @@ class MainPage extends Component {
             <div id="mainPage">
                 <Greeting />
             </div>
-            )
-        }
+        )
+    }
 }
 
 MainPage = reduxForm({

@@ -32,8 +32,8 @@ class Root extends React.Component {
                     </Route>
                 </Router>
             </Provider>
-            )
-        }
+        )
+    }
 }
 
 ReactDOM.render(<Root />, document.getElementById('app'))
