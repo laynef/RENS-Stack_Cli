@@ -1,38 +1,30 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { Field, reduxForm } from 'redux-form'
 
 
 class Main extends Component {
 
-  constructor(props, context) {
-      super(props, context)
-      this.state = {
-        
-      }
-  }
+    constructor(props, context) {
+        super(props, context)
+        this.state = {
 
-  // componentDidMount() {
-  //   const { store } = this.context
-  //   this.unsubscribe = store.subscribe(() => this.forceUpdate())
-  // }
+        }
+    }
 
-  // componentWillUnmount() {
-  //   this.unsubscribe()
-  // }
-
-  render() {
-    return (
-      <div id="MainComponent">
-          {/* Fill me in */}
-      </div>
-    )
-  }
+    render() {
+        return (
+            <div id="MainComponent">
+                {/* Fill me in */}
+            </div>
+        )
+    }
 
 }
 
-Main.contextTypes = {
-  store: React.PropTypes.object
-}
+Main = reduxForm({
+    form: 'Main Component'
+})(Main)
 
 export default connect(state => ({
 }))(Main)

@@ -3,22 +3,24 @@ import ReactDOM from 'react-dom'
 import { Router, Route, Link, browserHistory, IndexRoute } from 'react-router'
 import { Provider } from 'react-redux'
 import styles from './sass/index'
+import { createStore, combineReducers, applyMiddleware } from 'redux'
+import reduxThunk from 'redux-thunk'
+import createLogger from 'redux-logger'
+import ReduxPromise from 'redux-promise'
+import { reducers } from './combineReducers'
 
 import MasterPage from './pages/MasterPage'
 import MainPage from './pages/MainPage/MainPage'
 
-import storeConfig from './redux/store/configStore'
 
-let store = storeConfig()
+const logger = createLogger()
+
+const store = createStore(reducers,
+    applyMiddleware(reduxThunk, ReduxPromise, logger)
+)
 
 
 class Root extends React.Component {
-
-    getChildContext() {
-        return {
-            store: this.props.store
-        }
-    }
 
     render() {
         return (
@@ -32,10 +34,6 @@ class Root extends React.Component {
             </Provider>
             )
         }
-}
-
-Root.childContextTypes = {
-    store: React.PropTypes.object
 }
 
 ReactDOM.render(<Root />, document.getElementById('app'))
