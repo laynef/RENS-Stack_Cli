@@ -7,7 +7,7 @@ import { createStore, combineReducers, applyMiddleware } from 'redux'
 import reduxThunk from 'redux-thunk'
 import createLogger from 'redux-logger'
 import ReduxPromise from 'redux-promise'
-import { reducers } from './redux/store/combineReducers'
+import reducers from './redux/store/combineReducers'
 
 import MasterPage from './pages/MasterPage'
 import MainPage from './pages/MainPage/MainPage'
